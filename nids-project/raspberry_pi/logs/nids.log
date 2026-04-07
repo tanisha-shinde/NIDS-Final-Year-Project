@@ -290,3 +290,42 @@
 11:21:28 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.2%  pkts=65    flow=('10.201.219.168', '48.199.12.1', 60576,
 11:21:30 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=6     flow=('10.201.219.157', '10.201.219.168', 53,
 11:21:30 [WARNING] core.inference_engine: ATTACK: Bot           conf=100.0%  pkts=4     flow=('10.201.219.157', '10.201.219.168', 53,
+11:23:20 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=4     flow=('10.201.219.168', '140.82.113.21', 6044
+11:23:20 [WARNING] core.alert_system: [ALERT] Infiltration — severity: CRITICAL
+11:23:24 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=6     flow=('10.201.219.157', '10.201.219.168', 53,
+11:23:24 [WARNING] core.inference_engine: ATTACK: Bot           conf=100.0%  pkts=4     flow=('10.201.219.157', '10.201.219.168', 53,
+11:23:24 [WARNING] core.alert_system: [ALERT] Bot — severity: MEDIUM
+11:23:50 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=4     flow=('10.201.219.168', '52.168.117.175', 611
+11:23:50 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=4     flow=('10.201.219.168', '52.168.117.175', 600
+11:23:50 [WARNING] core.alert_system: [ALERT] Infiltration — severity: CRITICAL
+11:25:03 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=13    flow=('10.201.219.157', '10.201.219.168', 53,
+11:25:03 [WARNING] core.alert_system: [ALERT] Infiltration — severity: CRITICAL
+11:25:07 [WARNING] core.inference_engine: ATTACK: Bot           conf=100.0%  pkts=4     flow=('10.201.219.157', '10.201.219.168', 53,
+11:25:07 [WARNING] core.inference_engine: ATTACK: Bot           conf=100.0%  pkts=4     flow=('10.201.219.157', '10.201.219.168', 53,
+11:25:07 [WARNING] core.alert_system: [ALERT] Bot — severity: MEDIUM
+11:25:09 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=6     flow=('10.201.219.157', '10.201.219.168', 53,
+11:25:09 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=3     flow=('10.201.219.157', '10.201.219.168', 53,
+11:25:23 [WARNING] core.inference_engine: ATTACK: Bot           conf=100.0%  pkts=4     flow=('10.201.219.157', '10.201.219.168', 53,
+11:25:27 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=4     flow=('10.201.219.168', '52.168.117.174', 501
+11:25:51 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=4     flow=('10.201.219.168', '140.82.112.22', 4988
+11:25:51 [WARNING] core.alert_system: [ALERT] Infiltration — severity: CRITICAL
+11:25:57 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=8     flow=('10.201.219.157', '10.201.219.168', 53,
+11:26:07 [WARNING] core.inference_engine: ATTACK: Bot           conf=100.0%  pkts=13    flow=('10.201.219.157', '10.201.219.168', 53,
+11:26:07 [WARNING] core.alert_system: [ALERT] Bot — severity: MEDIUM
+11:26:19 [WARNING] core.inference_engine: ATTACK: Bot           conf=100.0%  pkts=4     flow=('10.201.219.157', '10.201.219.168', 53,
+11:26:29 [WARNING] core.inference_engine: ATTACK: Bot           conf=100.0%  pkts=4     flow=('10.201.219.157', '10.201.219.168', 53,
+11:27:03 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=8     flow=('10.201.219.157', '10.201.219.168', 53,
+11:27:03 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=6     flow=('10.201.219.157', '10.201.219.168', 53,
+11:27:03 [WARNING] core.alert_system: [ALERT] Infiltration — severity: CRITICAL
+11:27:31 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=4     flow=('10.201.219.168', '104.208.16.91', 5378
+11:27:51 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=4     flow=('10.201.219.168', '104.208.16.91', 6342
+11:27:51 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=4     flow=('10.201.219.168', '104.208.16.91', 5490
+11:27:51 [WARNING] core.alert_system: [ALERT] Infiltration — severity: CRITICAL
+11:27:55 [WARNING] core.inference_engine: ATTACK: Bot           conf=100.0%  pkts=13    flow=('10.201.219.157', '10.201.219.168', 53,
+11:27:55 [WARNING] core.alert_system: [ALERT] Bot — severity: MEDIUM
+11:28:31 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=4     flow=('10.201.219.168', '52.168.112.66', 5384
+11:28:32 [WARNING] core.alert_system: [ALERT] Infiltration — severity: CRITICAL
+11:29:18 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=4     flow=('10.201.219.168', '52.168.112.66', 5201
+11:29:18 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=4     flow=('10.201.219.168', '52.168.112.66', 5241
+11:29:18 [WARNING] core.alert_system: [ALERT] Infiltration — severity: CRITICAL
+11:29:24 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=5     flow=('10.201.219.168', '4.213.25.241', 49408

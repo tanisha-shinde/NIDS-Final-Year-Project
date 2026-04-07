@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NIDS — Network Intrusion Detection System</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Font Awesome 6 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <!-- Animate.css -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="/static/css/style.css"/>
+</head>
+<body>
+
+<!-- ═══════════════════════ ANIMATED BG ═══════════════════════ -->
+<div class="bg-grid" aria-hidden="true"></div>
+<div id="bg-particles" aria-hidden="true"></div>
+
+<!-- ═══════════════════════ NAVBAR ════════════════════════════ -->
+<nav class="nids-navbar">
+  <div class="nav-left">
+    <div class="nav-logo"><i class="fas fa-shield-halved"></i></div>
+    <span class="nav-brand">NIDS</span>
+    <span class="nav-sub d-none d-md-inline">Network Intrusion Detection System</span>
+  </div>
+  <div class="nav-right">
+    <div class="status-chip" id="chip-system">
+      <span class="chip-dot" id="dot-system"></span>
+      <span id="txt-system">Connecting…</span>
+    </div>
+    <div class="status-chip" id="chip-esp32">
+      <i class="fas fa-wifi me-1" style="font-size:.65rem"></i>
+      <span>ESP32</span>
+      <span class="chip-dot ms-1" id="dot-esp32"></span>
+    </div>
+    <div class="status-chip">
+      <i class="fas fa-brain me-1" style="font-size:.65rem"></i>
+      <span>3-Model Ensemble</span>
+    </div>
+    <div class="nav-clock" id="nav-clock">00:00:00</div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════ TOAST CONTAINER ═══════════════════ -->
+<div id="toast-box" aria-live="polite"></div>
+
+<!-- ═══════════════════════ MAIN CONTENT ══════════════════════ -->
+<main class="page-content">
+
+  <!-- ── STAT CARDS ── -->
+  <div class="row g-3 mb-4">
+    <div class="col-6 col-md-3">
+      <div class="stat-card accent-blue animate__animated animate__fadeInUp" style="animation-delay:.05s">
+        <div class="sc-icon text-blue"><i class="fas fa-network-wired"></i></div>
+        <div class="sc-val text-blue" id="sc-packets">0</div>
+        <div class="sc-lbl">Packets Captured</div>
+        <div class="sc-badge" id="badge-pps">— pps</div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="stat-card accent-cyan animate__animated animate__fadeInUp" style="animation-delay:.1s">
+        <div class="sc-icon text-cyan"><i class="fas fa-stream"></i></div>
+        <div class="sc-val text-cyan" id="sc-flows">0</div>
+        <div class="sc-lbl">Flows Classified</div>
+        <div class="sc-badge" id="badge-inf">0 inferences</div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="stat-card accent-red animate__animated animate__fadeInUp" style="animation-delay:.15s">
+        <div class="sc-icon text-red"><i class="fas fa-skull-crossbones"></i></div>
+        <div class="sc-val text-red" id="sc-attacks">0</div>
+        <div class="sc-lbl">Attacks Detected</div>
+        <div class="sc-badge sc-badge-red" id="badge-atk">No attacks</div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="stat-card accent-green animate__animated animate__fadeInUp" style="animation-delay:.2s">
+        <div class="sc-icon text-green"><i class="fas fa-brain"></i></div>
+        <div class="sc-val text-green" id="sc-models">3</div>
+        <div class="sc-lbl">Models Active</div>
+        <div class="sc-badge sc-badge-green">LSTM · CNN · AE</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CHARTS ROW ── -->
+  <div class="row g-3 mb-4">
+    <!-- Traffic Timeline -->
+    <div class="col-12 col-lg-8">
+      <div class="panel animate__animated animate__fadeInLeft" style="animation-delay:.2s">
+        <div class="panel-head">
+          <span class="panel-title"><i class="fas fa-chart-line me-2 text-cyan"></i>Live Traffic Monitor</span>
+          <span class="panel-badge">
+            <span class="chip-dot chip-dot-green pulse-dot"></span> Real-time
+          </span>
+        </div>
+        <div class="panel-body" style="height:230px">
+          <canvas id="chart-traffic"></canvas>
+        </div>
+      </div>
+    </div>
+    <!-- Attack Donut -->
+    <div class="col-12 col-lg-4">
+      <div class="panel animate__animated animate__fadeInRight" style="animation-delay:.2s">
+        <div class="panel-head">
+          <span class="panel-title"><i class="fas fa-chart-pie me-2 text-orange"></i>Attack Distribution</span>
+        </div>
+        <div class="panel-body donut-wrap" style="height:230px">
+          <canvas id="chart-donut"></canvas>
+          <div class="donut-center" id="donut-center">
+            <div class="donut-num" id="donut-num">0</div>
+            <div class="donut-sub">Total</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── INFO ROW ── -->
+  <div class="row g-3 mb-4">
+    <!-- Model Status -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="panel animate__animated animate__fadeInUp" style="animation-delay:.25s">
+        <div class="panel-head">
+          <span class="panel-title"><i class="fas fa-microchip me-2 text-purple"></i>AI Models</span>
+        </div>
+        <div class="panel-body">
+          <div class="model-row">
+            <div class="model-icon" style="background:rgba(155,89,255,.12);border-color:rgba(155,89,255,.25)">
+              <i class="fas fa-infinity text-purple"></i>
+            </div>
+            <div class="model-info">
+              <div class="model-name">LSTM</div>
+              <div class="model-desc">Temporal Attack Patterns</div>
+            </div>
+            <div class="model-badge" id="badge-lstm">Loading</div>
+          </div>
+          <div class="model-row">
+            <div class="model-icon" style="background:rgba(0,150,255,.12);border-color:rgba(0,150,255,.25)">
+              <i class="fas fa-layer-group text-blue"></i>
+            </div>
+            <div class="model-info">
+              <div class="model-name">CNN-1D</div>
+              <div class="model-desc">DDoS / Flood Detector</div>
+            </div>
+            <div class="model-badge" id="badge-cnn">Loading</div>
+          </div>
+          <div class="model-row">
+            <div class="model-icon" style="background:rgba(0,255,170,.1);border-color:rgba(0,255,170,.2)">
+              <i class="fas fa-eye text-cyan"></i>
+            </div>
+            <div class="model-info">
+              <div class="model-name">Autoencoder</div>
+              <div class="model-desc">Zero-Day Anomaly Detect</div>
+            </div>
+            <div class="model-badge" id="badge-ae">Loading</div>
+          </div>
+          <div class="model-row">
+            <div class="model-icon" style="background:rgba(255,215,0,.08);border-color:rgba(255,215,0,.2)">
+              <i class="fas fa-wifi text-yellow"></i>
+            </div>
+            <div class="model-info">
+              <div class="model-name">ESP32 Sensor</div>
+              <div class="model-desc">Wi-Fi Packet Sniffer</div>
+            </div>
+            <div class="model-badge" id="badge-esp32-row">Offline</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- System Health -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="panel animate__animated animate__fadeInUp" style="animation-delay:.3s">
+        <div class="panel-head">
+          <span class="panel-title"><i class="fas fa-heartbeat me-2 text-red"></i>System Health</span>
+          <span class="panel-badge" id="health-ts">--:--:--</span>
+        </div>
+        <div class="panel-body">
+          <div class="health-row">
+            <div class="health-lbl"><i class="fas fa-microchip"></i> CPU<span class="health-val" id="h-cpu">--%</span></div>
+            <div class="progress hbar"><div class="progress-bar bg-cyan"  id="bar-cpu"  style="width:0%"></div></div>
+          </div>
+          <div class="health-row">
+            <div class="health-lbl"><i class="fas fa-memory"></i> RAM<span class="health-val" id="h-ram">--%</span></div>
+            <div class="progress hbar"><div class="progress-bar bg-purple" id="bar-ram"  style="width:0%"></div></div>
+          </div>
+          <div class="health-row">
+            <div class="health-lbl"><i class="fas fa-hdd"></i> Disk<span class="health-val" id="h-disk">--%</span></div>
+            <div class="progress hbar"><div class="progress-bar bg-orange" id="bar-disk" style="width:0%"></div></div>
+          </div>
+          <div class="health-row">
+            <div class="health-lbl"><i class="fas fa-thermometer-half"></i> Temp<span class="health-val" id="h-temp">--°C</span></div>
+            <div class="progress hbar"><div class="progress-bar bg-red"    id="bar-temp" style="width:0%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Attack Breakdown -->
+    <div class="col-12 col-lg-4">
+      <div class="panel animate__animated animate__fadeInUp" style="animation-delay:.35s">
+        <div class="panel-head">
+          <span class="panel-title"><i class="fas fa-list-alt me-2 text-yellow"></i>Attack Breakdown</span>
+        </div>
+        <div class="panel-body" id="atk-breakdown">
+          <div class="empty-info"><i class="fas fa-shield-check me-2"></i>Monitoring…</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── ALERT FEED ── -->
+  <div class="row g-3 mb-3">
+    <div class="col-12">
+      <div class="panel animate__animated animate__fadeInUp" style="animation-delay:.35s">
+        <div class="panel-head">
+          <div class="d-flex align-items-center gap-2">
+            <span class="panel-title"><i class="fas fa-bell me-2 text-yellow"></i>Live Alert Feed</span>
+            <span class="badge bg-danger rounded-pill" id="badge-count">0</span>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <span class="panel-badge">
+              <span class="chip-dot chip-dot-green pulse-dot"></span> Live
+            </span>
+            <button class="btn-clr" id="btn-clear" onclick="clearAlerts()">
+              <i class="fas fa-trash-alt"></i> Clear
+            </button>
+          </div>
+        </div>
+        <div class="panel-body p-0">
+          <div class="table-responsive">
+            <table class="nids-tbl">
+              <thead>
+                <tr>
+                  <th>#</th><th>Time</th><th>Attack Type</th><th>Severity</th>
+                  <th>Confidence</th><th>Anomaly</th><th>Pkts</th><th>Dur</th><th>Flow</th>
+                </tr>
+              </thead>
+              <tbody id="alert-tbody">
+                <tr class="empty-tr">
+                  <td colspan="9">
+                    <i class="fas fa-shield-check me-2" style="color:var(--green)"></i>
+                    No alerts — monitoring network traffic…
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="nids-footer">
+    <span><i class="fas fa-shield-halved me-1"></i>NIDS v1.0 — Real-Time Network Intrusion Detection System</span>
+    <span class="d-none d-md-inline">
+      <i class="fas fa-microchip me-1"></i>Raspberry Pi 4 + ESP32
+      &nbsp;·&nbsp;
+      <i class="fas fa-brain me-1"></i>LSTM + CNN-1D + Autoencoder
+      &nbsp;·&nbsp;
+      <i class="fas fa-database me-1"></i>CICIDS2017
+    </span>
+  </footer>
+
+</main>
+
+<!-- ═══════════════════════ SCRIPTS ═══════════════════════════ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.1/socket.io.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/static/js/dashboard.js"></script>
+</body>
+</html>

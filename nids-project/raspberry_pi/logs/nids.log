@@ -1,0 +1,292 @@
+13:07:04 [INFO ] root: ============================================================
+13:07:04 [INFO ] root:   NIDS — Network Intrusion Detection System
+13:07:04 [INFO ] root:   Device: Raspberry Pi 4 | Python 3.10.11
+13:07:04 [INFO ] root: ============================================================
+13:07:23 [INFO ] core.inference_engine: Feature scaler loaded from C:\Users\Tanisha\Documents\finl year\NIDS_FinalYearProject\nids-project\raspberry_pi\models\scaler.pkl
+13:07:43 [INFO ] core.inference_engine: LSTM loaded | input=[ 1 10 20] output=[1 6]
+13:07:43 [INFO ] core.inference_engine: CNN-1D loaded | input=[ 1 20  1] output=[1 6]
+13:07:43 [INFO ] core.inference_engine: Autoencoder loaded | input=[ 1 20] output=[ 1 20]
+13:07:43 [INFO ] core.inference_engine: InferenceEngine ready — 3-model ensemble
+13:07:43 [INFO ] core.feature_extractor: FeatureExtractor ready (timeout=30s)
+13:07:44 [INFO ] dashboard.app: Flask dashboard app created
+13:07:44 [INFO ] core.mqtt_client: MQTT client connecting to localhost:1883
+13:07:44 [INFO ] root: Started thread: MQTT
+13:07:44 [INFO ] core.inference_engine: Inference loop started (interval=2.0s)
+13:07:44 [INFO ] root: Started thread: Inference
+13:07:44 [INFO ] core.alert_system: Alert system running
+13:07:44 [INFO ] root: Started thread: Alerts
+13:07:44 [INFO ] core.packet_sniffer: Scapy sniffer starting on interface: wlan0
+13:07:44 [INFO ] root: Started thread: Sniffer
+13:07:44 [ERROR] core.packet_sniffer: Sniffer error: Interface 'wlan0' not found !
+13:07:44 [INFO ] root: All systems go. Monitoring network traffic…
+13:07:48 [ERROR] core.mqtt_client: MQTT connection refused — is Mosquitto running?
+  sudo systemctl start mosquitto
+14:03:42 [INFO ] root: ============================================================
+14:03:42 [INFO ] root:   NIDS — Network Intrusion Detection System
+14:03:42 [INFO ] root:   Device: Raspberry Pi 4 | Python 3.10.11
+14:03:42 [INFO ] root: ============================================================
+14:03:45 [INFO ] core.inference_engine: Feature scaler loaded from C:\Users\Tanisha\Documents\finl year\NIDS_FinalYearProject\nids-project\raspberry_pi\models\scaler.pkl
+14:03:56 [INFO ] core.inference_engine: LSTM loaded | input=[ 1 10 20] output=[1 6]
+14:03:56 [INFO ] core.inference_engine: CNN-1D loaded | input=[ 1 20  1] output=[1 6]
+14:03:56 [INFO ] core.inference_engine: Autoencoder loaded | input=[ 1 20] output=[ 1 20]
+14:03:56 [INFO ] core.inference_engine: InferenceEngine ready — 3-model ensemble
+14:03:56 [INFO ] core.feature_extractor: FeatureExtractor ready (timeout=30s)
+14:03:56 [INFO ] dashboard.app: Flask dashboard app created
+14:03:56 [INFO ] core.mqtt_client: MQTT client connecting to localhost:1883
+14:03:56 [INFO ] root: Started thread: MQTT
+14:03:56 [INFO ] core.inference_engine: Inference loop started (interval=2.0s)
+14:03:56 [INFO ] root: Started thread: Inference
+14:03:56 [INFO ] core.alert_system: Alert system running
+14:03:56 [INFO ] root: Started thread: Alerts
+14:03:56 [INFO ] core.packet_sniffer: Scapy sniffer starting on interface: wlan0
+14:03:56 [INFO ] root: Started thread: Sniffer
+14:03:56 [INFO ] root: All systems go. Monitoring network traffic…
+14:03:57 [ERROR] core.packet_sniffer: Sniffer error: Interface 'wlan0' not found !
+14:05:37 [INFO ] root: ============================================================
+14:05:37 [INFO ] root:   NIDS — Network Intrusion Detection System
+14:05:37 [INFO ] root:   Device: Raspberry Pi 4 | Python 3.10.11
+14:05:37 [INFO ] root: ============================================================
+14:05:39 [INFO ] core.inference_engine: Feature scaler loaded from C:\Users\Tanisha\Documents\finl year\NIDS_FinalYearProject\nids-project\raspberry_pi\models\scaler.pkl
+14:05:46 [INFO ] core.inference_engine: LSTM loaded | input=[ 1 10 20] output=[1 6]
+14:05:46 [INFO ] core.inference_engine: CNN-1D loaded | input=[ 1 20  1] output=[1 6]
+14:05:46 [INFO ] core.inference_engine: Autoencoder loaded | input=[ 1 20] output=[ 1 20]
+14:05:46 [INFO ] core.inference_engine: InferenceEngine ready — 3-model ensemble
+14:05:46 [INFO ] core.feature_extractor: FeatureExtractor ready (timeout=30s)
+14:05:47 [INFO ] dashboard.app: Flask dashboard app created
+14:05:47 [INFO ] core.mqtt_client: MQTT client connecting to localhost:1883
+14:05:47 [INFO ] root: Started thread: MQTT
+14:05:47 [INFO ] core.inference_engine: Inference loop started (interval=2.0s)
+14:05:47 [INFO ] root: Started thread: Inference
+14:05:47 [INFO ] core.alert_system: Alert system running
+14:05:47 [INFO ] root: Started thread: Alerts
+14:05:47 [INFO ] core.packet_sniffer: Scapy sniffer starting on interface: wlan0
+14:05:47 [INFO ] root: Started thread: Sniffer
+14:05:47 [INFO ] root: All systems go. Monitoring network traffic…
+14:05:47 [ERROR] core.packet_sniffer: Sniffer error: Interface 'wlan0' not found !
+14:05:51 [ERROR] core.mqtt_client: MQTT connection refused — is Mosquitto running?
+  sudo systemctl start mosquitto
+14:19:36 [INFO ] root: ============================================================
+14:19:36 [INFO ] root:   NIDS — Network Intrusion Detection System
+14:19:36 [INFO ] root:   Device: Raspberry Pi 4 | Python 3.10.11
+14:19:36 [INFO ] root: ============================================================
+14:19:43 [INFO ] core.inference_engine: Feature scaler loaded from C:\Users\Tanisha\Documents\finl year\NIDS_FinalYearProject\nids-project\raspberry_pi\models\scaler.pkl
+14:19:58 [INFO ] core.inference_engine: LSTM loaded | input=[ 1 10 20] output=[1 6]
+14:19:58 [INFO ] core.inference_engine: CNN-1D loaded | input=[ 1 20  1] output=[1 6]
+14:19:58 [INFO ] core.inference_engine: Autoencoder loaded | input=[ 1 20] output=[ 1 20]
+14:19:58 [INFO ] core.inference_engine: InferenceEngine ready — 3-model ensemble
+14:19:58 [INFO ] core.feature_extractor: FeatureExtractor ready (timeout=30s)
+14:19:59 [INFO ] dashboard.app: Flask dashboard app created
+14:19:59 [INFO ] core.mqtt_client: MQTT client connecting to localhost:1883
+14:19:59 [INFO ] root: Started thread: MQTT
+14:19:59 [INFO ] core.inference_engine: Inference loop started (interval=2.0s)
+14:19:59 [INFO ] root: Started thread: Inference
+14:19:59 [INFO ] core.alert_system: Alert system running
+14:19:59 [INFO ] root: Started thread: Alerts
+14:19:59 [INFO ] core.packet_sniffer: Scapy sniffer starting on interface: wlan0
+14:19:59 [INFO ] root: Started thread: Sniffer
+14:19:59 [INFO ] root: All systems go. Monitoring network traffic…
+14:19:59 [ERROR] core.packet_sniffer: Sniffer error: Interface 'wlan0' not found !
+14:20:03 [ERROR] core.mqtt_client: MQTT connection refused — is Mosquitto running?
+  sudo systemctl start mosquitto
+15:31:36 [INFO ] root: ============================================================
+15:31:36 [INFO ] root:   NIDS — Network Intrusion Detection System
+15:31:36 [INFO ] root:   Device: Raspberry Pi 4 | Python 3.10.11
+15:31:36 [INFO ] root: ============================================================
+15:31:53 [INFO ] core.inference_engine: Feature scaler loaded from C:\Users\Tanisha\Documents\finl year\NIDS_FinalYearProject\nids-project\raspberry_pi\models\scaler.pkl
+15:32:17 [INFO ] core.inference_engine: LSTM loaded | input=[ 1 10 20] output=[1 6]
+15:32:17 [INFO ] core.inference_engine: CNN-1D loaded | input=[ 1 20  1] output=[1 6]
+15:32:17 [INFO ] core.inference_engine: Autoencoder loaded | input=[ 1 20] output=[ 1 20]
+15:32:17 [INFO ] core.inference_engine: InferenceEngine ready — 3-model ensemble
+15:32:17 [INFO ] core.feature_extractor: FeatureExtractor ready (timeout=30s)
+15:32:18 [INFO ] dashboard.app: Flask dashboard app created
+15:32:18 [INFO ] core.mqtt_client: MQTT client connecting to localhost:1883
+15:32:18 [INFO ] root: Started thread: MQTT
+15:32:18 [INFO ] core.inference_engine: Inference loop started (interval=2.0s)
+15:32:18 [INFO ] root: Started thread: Inference
+15:32:18 [INFO ] core.alert_system: Alert system running
+15:32:18 [INFO ] root: Started thread: Alerts
+15:32:18 [INFO ] core.packet_sniffer: Scapy sniffer starting on interface: wlan0
+15:32:18 [INFO ] root: Started thread: Sniffer
+15:32:18 [ERROR] core.packet_sniffer: Sniffer error: Interface 'wlan0' not found !
+15:32:18 [INFO ] root: All systems go. Monitoring network traffic…
+15:32:22 [ERROR] core.mqtt_client: MQTT connection refused — is Mosquitto running?
+  sudo systemctl start mosquitto
+10:45:49 [INFO ] root: ============================================================
+10:45:49 [INFO ] root:   NIDS — Network Intrusion Detection System
+10:45:49 [INFO ] root:   Device: Raspberry Pi 4 | Python 3.10.11
+10:45:49 [INFO ] root: ============================================================
+10:46:04 [INFO ] core.inference_engine: Feature scaler loaded from C:\Users\Tanisha\Documents\finl year\NIDS_FinalYearProject\nids-project\raspberry_pi\models\scaler.pkl
+10:46:21 [INFO ] core.inference_engine: LSTM loaded | input=[ 1 10 20] output=[1 6]
+10:46:21 [INFO ] core.inference_engine: CNN-1D loaded | input=[ 1 20  1] output=[1 6]
+10:46:21 [INFO ] core.inference_engine: Autoencoder loaded | input=[ 1 20] output=[ 1 20]
+10:46:21 [INFO ] core.inference_engine: InferenceEngine ready — 3-model ensemble
+10:46:21 [INFO ] core.feature_extractor: FeatureExtractor ready (timeout=30s)
+10:46:21 [INFO ] dashboard.app: Flask dashboard app created
+10:46:21 [INFO ] core.mqtt_client: MQTT client connecting to localhost:1883
+10:46:21 [INFO ] root: Started thread: MQTT
+10:46:21 [INFO ] core.inference_engine: Inference loop started (interval=2.0s)
+10:46:21 [INFO ] root: Started thread: Inference
+10:46:21 [INFO ] core.alert_system: Alert system running
+10:46:21 [INFO ] root: Started thread: Alerts
+10:46:22 [INFO ] core.packet_sniffer: Scapy sniffer starting on interface: wlan0
+10:46:22 [INFO ] root: Started thread: Sniffer
+10:46:22 [ERROR] core.packet_sniffer: Sniffer error: Interface 'wlan0' not found !
+10:46:22 [INFO ] root: All systems go. Monitoring network traffic…
+10:46:26 [ERROR] core.mqtt_client: MQTT connection refused — is Mosquitto running?
+  sudo systemctl start mosquitto
+10:53:55 [INFO ] root: ============================================================
+10:53:55 [INFO ] root:   NIDS — Network Intrusion Detection System
+10:53:55 [INFO ] root:   Device: Raspberry Pi 4 | Python 3.10.11
+10:53:55 [INFO ] root: ============================================================
+10:54:00 [INFO ] core.inference_engine: Feature scaler loaded from C:\Users\Tanisha\Documents\finl year\NIDS_FinalYearProject\nids-project\raspberry_pi\models\scaler.pkl
+10:54:11 [INFO ] core.inference_engine: LSTM loaded | input=[ 1 10 20] output=[1 6]
+10:54:11 [INFO ] core.inference_engine: CNN-1D loaded | input=[ 1 20  1] output=[1 6]
+10:54:11 [INFO ] core.inference_engine: Autoencoder loaded | input=[ 1 20] output=[ 1 20]
+10:54:11 [INFO ] core.inference_engine: InferenceEngine ready — 3-model ensemble
+10:54:11 [INFO ] core.feature_extractor: FeatureExtractor ready (timeout=30s)
+10:54:12 [INFO ] dashboard.app: Flask dashboard app created
+10:54:12 [INFO ] core.mqtt_client: MQTT client connecting to localhost:1883
+10:54:12 [INFO ] root: Started thread: MQTT
+10:54:12 [INFO ] core.inference_engine: Inference loop started (interval=2.0s)
+10:54:12 [INFO ] root: Started thread: Inference
+10:54:12 [INFO ] core.alert_system: Alert system running
+10:54:12 [INFO ] root: Started thread: Alerts
+10:54:12 [INFO ] core.packet_sniffer: Scapy sniffer starting on interface: Wi-Fi
+10:54:12 [INFO ] root: Started thread: Sniffer
+10:54:12 [ERROR] core.packet_sniffer: Sniffer error: Sniffing and sending packets is not available at layer 2: winpcap is not installed. You may use conf.L3socket or conf.L3socket6 to access layer 3
+10:54:12 [INFO ] root: All systems go. Monitoring network traffic…
+10:54:16 [ERROR] core.mqtt_client: MQTT connection refused — is Mosquitto running?
+  sudo systemctl start mosquitto
+11:02:05 [INFO ] root: ============================================================
+11:02:05 [INFO ] root:   NIDS — Network Intrusion Detection System
+11:02:05 [INFO ] root:   Device: Raspberry Pi 4 | Python 3.10.11
+11:02:05 [INFO ] root: ============================================================
+11:02:23 [INFO ] core.inference_engine: Feature scaler loaded from C:\Users\Tanisha\Documents\finl year\NIDS_FinalYearProject\nids-project\raspberry_pi\models\scaler.pkl
+11:02:43 [INFO ] core.inference_engine: LSTM loaded | input=[ 1 10 20] output=[1 6]
+11:02:43 [INFO ] core.inference_engine: CNN-1D loaded | input=[ 1 20  1] output=[1 6]
+11:02:43 [INFO ] core.inference_engine: Autoencoder loaded | input=[ 1 20] output=[ 1 20]
+11:02:43 [INFO ] core.inference_engine: InferenceEngine ready — 3-model ensemble
+11:02:43 [INFO ] core.feature_extractor: FeatureExtractor ready (timeout=30s)
+11:02:44 [INFO ] dashboard.app: Flask dashboard app created
+11:02:44 [INFO ] core.mqtt_client: MQTT client connecting to localhost:1883
+11:02:44 [INFO ] root: Started thread: MQTT
+11:02:44 [INFO ] core.inference_engine: Inference loop started (interval=2.0s)
+11:02:44 [INFO ] root: Started thread: Inference
+11:02:44 [INFO ] core.alert_system: Alert system running
+11:02:44 [INFO ] root: Started thread: Alerts
+11:02:44 [INFO ] core.packet_sniffer: Scapy sniffer starting on interface: Wi-Fi
+11:02:44 [INFO ] root: Started thread: Sniffer
+11:02:44 [INFO ] root: All systems go. Monitoring network traffic…
+11:02:48 [ERROR] core.mqtt_client: MQTT connection refused — is Mosquitto running?
+  sudo systemctl start mosquitto
+11:03:28 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=4     flow=('10.201.219.168', '44.239.42.41', 61714
+11:03:28 [WARNING] core.alert_system: [ALERT] Infiltration — severity: CRITICAL
+11:04:55 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=13    flow=('10.201.219.168', '4.186.14.122', 54110
+11:04:55 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.1%  pkts=16    flow=('10.201.219.168', '52.123.131.14', 5835
+11:04:55 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=17    flow=('10.201.219.168', '52.123.130.14', 5835
+11:04:55 [WARNING] core.alert_system: [ALERT] Infiltration — severity: CRITICAL
+11:05:11 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=3     flow=('10.201.219.168', '4.213.25.241', 49408
+11:05:15 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=8     flow=('10.201.219.157', '10.201.219.168', 53,
+11:05:17 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=8     flow=('10.201.219.157', '10.201.219.168', 53,
+11:05:17 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=8     flow=('10.201.219.157', '10.201.219.168', 53,
+11:05:19 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=10    flow=('10.201.219.168', '74.224.107.131', 632
+11:05:25 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.5%  pkts=96    flow=('10.201.219.168', '49.44.130.145', 6458
+11:05:25 [WARNING] core.alert_system: [ALERT] Infiltration — severity: CRITICAL
+11:05:49 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=4     flow=('10.201.219.168', '3.219.89.62', 49908,
+11:05:53 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=10    flow=('10.201.219.168', '74.224.107.131', 499
+11:05:53 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=10    flow=('10.201.219.168', '74.224.107.131', 499
+11:05:53 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=10    flow=('10.201.219.168', '74.224.107.131', 499
+11:05:53 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=10    flow=('10.201.219.168', '74.224.107.131', 499
+11:05:57 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.1%  pkts=25    flow=('10.201.219.168', '20.72.205.209', 5776
+11:05:57 [WARNING] core.alert_system: [ALERT] Infiltration — severity: CRITICAL
+11:05:59 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=38    flow=('10.201.219.157', '10.201.219.168', 53,
+11:05:59 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=12    flow=('10.201.219.157', '10.201.219.168', 53,
+11:06:25 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.1%  pkts=16    flow=('10.201.219.157', '10.201.219.168', 53,
+11:06:25 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=16    flow=('10.201.219.157', '10.201.219.168', 53,
+11:06:25 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=8     flow=('10.201.219.157', '10.201.219.168', 53,
+11:06:25 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=8     flow=('10.201.219.157', '10.201.219.168', 53,
+11:06:29 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.1%  pkts=44    flow=('10.201.219.157', '10.201.219.168', 53,
+11:06:29 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=10    flow=('10.201.219.157', '10.201.219.168', 53,
+11:06:29 [WARNING] core.alert_system: [ALERT] Infiltration — severity: CRITICAL
+11:06:35 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=5     flow=('10.201.219.168', '172.64.155.209', 561
+11:06:37 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=4     flow=('10.201.219.157', '10.201.219.168', 53,
+11:06:37 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=4     flow=('10.201.219.157', '10.201.219.168', 53,
+11:06:38 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=3     flow=('10.201.219.157', '10.201.219.168', 53,
+11:06:38 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=3     flow=('10.201.219.157', '10.201.219.168', 53,
+11:06:42 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.1%  pkts=25    flow=('10.201.219.168', '162.125.81.18', 5612
+11:06:46 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=8     flow=('10.201.219.157', '10.201.219.168', 53,
+11:06:58 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=13    flow=('10.201.219.157', '10.201.219.168', 53,
+11:06:58 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=5     flow=('10.201.219.157', '10.201.219.168', 53,
+11:07:02 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=3     flow=('10.201.219.157', '10.201.219.168', 53,
+11:07:02 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=3     flow=('10.201.219.157', '10.201.219.168', 53,
+11:07:02 [WARNING] core.alert_system: [ALERT] Infiltration — severity: CRITICAL
+11:07:06 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.2%  pkts=33    flow=('10.201.219.168', '52.84.118.59', 55150
+11:07:06 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=32    flow=('10.201.219.168', '49.44.130.138', 5515
+11:07:08 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.5%  pkts=77    flow=('10.201.219.168', '52.24.34.3', 56137, 
+11:07:10 [WARNING] core.inference_engine: ATTACK: DDoS          conf=79.1%  pkts=3     flow=('10.201.219.168', '108.159.46.94', 5019
+11:07:10 [WARNING] core.alert_system: [ALERT] DDoS — severity: CRITICAL
+11:08:00 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=14    flow=('10.201.219.157', '10.201.219.168', 53,
+11:08:00 [WARNING] core.alert_system: [ALERT] Infiltration — severity: CRITICAL
+11:08:00 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=14    flow=('10.201.219.157', '10.201.219.168', 53,
+11:08:22 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=4     flow=('10.201.219.168', '57.144.243.32', 4967
+11:08:42 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=4     flow=('10.201.219.168', '52.24.34.3', 56137, 
+11:08:42 [WARNING] core.alert_system: [ALERT] Infiltration — severity: CRITICAL
+11:09:21 [WARNING] core.inference_engine: ATTACK: Bot           conf=100.0%  pkts=4     flow=('10.201.219.157', '10.201.219.168', 53,
+11:09:21 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=6     flow=('10.201.219.168', '4.213.25.241', 49408
+11:09:21 [WARNING] core.alert_system: [ALERT] Bot — severity: MEDIUM
+11:09:21 [WARNING] core.alert_system: [ALERT] Infiltration — severity: CRITICAL
+11:09:23 [WARNING] core.inference_engine: ATTACK: Bot           conf=100.0%  pkts=4     flow=('10.201.219.157', '10.201.219.168', 53,
+11:09:25 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.2%  pkts=28    flow=('10.201.219.168', '150.171.109.130', 58
+11:09:27 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=12    flow=('10.201.219.157', '10.201.219.168', 53,
+11:09:31 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=10    flow=('10.201.219.157', '10.201.219.168', 53,
+11:09:35 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.4%  pkts=47    flow=('10.201.219.168', '40.126.17.133', 5847
+11:10:17 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.7%  pkts=23790  flow=('10.201.219.168', '49.44.130.144', 5776
+11:10:17 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=51.4%  pkts=19699  flow=('10.201.219.168', '49.44.130.145', 5776
+11:10:17 [WARNING] core.alert_system: [ALERT] Infiltration — severity: CRITICAL
+11:10:21 [WARNING] core.inference_engine: ATTACK: Bot           conf=100.0%  pkts=4     flow=('10.201.219.157', '10.201.219.168', 53,
+11:10:21 [WARNING] core.alert_system: [ALERT] Bot — severity: MEDIUM
+11:10:23 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=6     flow=('10.201.219.157', '10.201.219.168', 53,
+11:10:55 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.4%  pkts=7     flow=('10.201.219.168', '150.171.109.130', 58
+11:10:55 [WARNING] core.alert_system: [ALERT] Infiltration — severity: CRITICAL
+11:11:19 [WARNING] core.inference_engine: ATTACK: Bot           conf=100.0%  pkts=4     flow=('10.201.219.157', '10.201.219.168', 53,
+11:11:19 [WARNING] core.alert_system: [ALERT] Bot — severity: MEDIUM
+11:11:27 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=8     flow=('10.201.219.157', '10.201.219.168', 53,
+11:11:27 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=6     flow=('10.201.219.157', '10.201.219.168', 53,
+11:11:27 [WARNING] core.alert_system: [ALERT] Infiltration — severity: CRITICAL
+11:11:33 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=3     flow=('10.201.219.168', '40.126.17.133', 5847
+11:12:11 [WARNING] core.inference_engine: ATTACK: Bot           conf=100.0%  pkts=4     flow=('10.201.219.157', '10.201.219.168', 53,
+11:12:11 [WARNING] core.inference_engine: ATTACK: Bot           conf=100.0%  pkts=4     flow=('10.201.219.157', '10.201.219.168', 53,
+11:12:11 [WARNING] core.alert_system: [ALERT] Bot — severity: MEDIUM
+11:13:15 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=3     flow=('10.201.219.168', '4.213.25.241', 49408
+11:13:16 [WARNING] core.alert_system: [ALERT] Infiltration — severity: CRITICAL
+11:16:10 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=12    flow=('10.201.219.157', '10.201.219.168', 53,
+11:16:10 [WARNING] core.alert_system: [ALERT] Infiltration — severity: CRITICAL
+11:16:12 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=16    flow=('10.201.219.157', '10.201.219.168', 53,
+11:16:12 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=14    flow=('10.201.219.157', '10.201.219.168', 53,
+11:16:28 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=4     flow=('10.201.219.168', '54.70.238.136', 6461
+11:16:28 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=4     flow=('10.201.219.168', '54.70.238.136', 5439
+11:16:48 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=4     flow=('10.201.219.168', '20.189.173.26', 5193
+11:16:48 [WARNING] core.alert_system: [ALERT] Infiltration — severity: CRITICAL
+11:16:52 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=4     flow=('10.201.219.168', '52.182.143.211', 623
+11:16:58 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=4     flow=('10.201.219.168', '52.182.143.211', 506
+11:17:00 [WARNING] core.inference_engine: ATTACK: Bot           conf=100.0%  pkts=4     flow=('10.201.219.157', '10.201.219.168', 53,
+11:17:00 [WARNING] core.alert_system: [ALERT] Bot — severity: MEDIUM
+11:17:35 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=4     flow=('10.201.219.168', '52.182.143.211', 584
+11:17:35 [WARNING] core.alert_system: [ALERT] Infiltration — severity: CRITICAL
+11:17:39 [WARNING] core.inference_engine: ATTACK: Bot           conf=100.0%  pkts=4     flow=('10.201.219.157', '10.201.219.168', 53,
+11:17:39 [WARNING] core.inference_engine: ATTACK: Bot           conf=100.0%  pkts=4     flow=('10.201.219.157', '10.201.219.168', 53,
+11:17:39 [WARNING] core.alert_system: [ALERT] Bot — severity: MEDIUM
+11:17:41 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=23    flow=('10.201.219.168', '13.69.116.105', 5456
+11:17:43 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=17    flow=('10.201.219.168', '13.69.116.105', 5735
+11:17:43 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=23    flow=('10.201.219.168', '13.69.116.105', 5735
+11:17:49 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=4     flow=('10.201.219.168', '52.182.143.211', 588
+11:20:19 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=4     flow=('10.201.219.168', '40.74.98.194', 50284
+11:20:19 [WARNING] core.alert_system: [ALERT] Infiltration — severity: CRITICAL
+11:21:14 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=5     flow=('10.201.219.168', '4.213.25.241', 49408
+11:21:14 [WARNING] core.alert_system: [ALERT] Infiltration — severity: CRITICAL
+11:21:22 [WARNING] core.inference_engine: ATTACK: Bot           conf=100.0%  pkts=4     flow=('10.201.219.157', '10.201.219.168', 53,
+11:21:22 [WARNING] core.inference_engine: ATTACK: Bot           conf=100.0%  pkts=4     flow=('10.201.219.157', '10.201.219.168', 53,
+11:21:22 [WARNING] core.alert_system: [ALERT] Bot — severity: MEDIUM
+11:21:28 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.2%  pkts=65    flow=('10.201.219.168', '48.199.12.1', 60576,
+11:21:30 [WARNING] core.inference_engine: ATTACK: Infiltration  conf=50.0%  pkts=6     flow=('10.201.219.157', '10.201.219.168', 53,
+11:21:30 [WARNING] core.inference_engine: ATTACK: Bot           conf=100.0%  pkts=4     flow=('10.201.219.157', '10.201.219.168', 53,

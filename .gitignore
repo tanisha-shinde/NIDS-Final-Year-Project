@@ -1,0 +1,10 @@
+venv/
+nids-project/raspberry_pi/venv/
+
+__pycache__/
+*.pyc
+*.pkl
+*.h5
+*.pt
+*.joblib
+.env

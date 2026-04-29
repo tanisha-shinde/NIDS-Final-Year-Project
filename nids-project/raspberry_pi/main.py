@@ -20,6 +20,7 @@ import time
 import signal
 import logging
 import threading
+import requests
 from logging.handlers import RotatingFileHandler
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -56,6 +57,43 @@ def setup_logging():
     fh.setFormatter(fmt)
     root.addHandler(fh)
     return root
+
+
+def send_telegram_alert(attack_type=None):
+    """
+    Send a Telegram alert for non-normal predictions.
+    """
+    logger = logging.getLogger("main")
+    bot_token = getattr(config, "TELEGRAM_BOT_TOKEN", "")
+    chat_id = getattr(config, "TELEGRAM_CHAT_ID", "")
+
+    if (
+        not bot_token
+        or not chat_id
+        or "YOUR_BOT_TOKEN" in str(bot_token)
+        or "YOUR_CHAT_ID" in str(chat_id)
+    ):
+        logger.warning("Telegram alert skipped: bot token/chat id not configured")
+        return False
+
+    message = "🚨 ALERT: Network Attack Detected"
+    if attack_type:
+        message += f"\nAttack Type: {attack_type}"
+
+    url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+    try:
+        resp = requests.post(
+            url,
+            json={"chat_id": chat_id, "text": message},
+            timeout=10,
+        )
+        if resp.status_code == 200:
+            logger.info("Telegram alert sent")
+            return True
+        logger.error("Telegram alert failed (%d): %s", resp.status_code, resp.text[:120])
+    except requests.RequestException as e:
+        logger.error("Telegram alert error: %s", e)
+    return False
 
 
 # ============================================================
@@ -111,6 +149,16 @@ def main():
     feature_ex = FeatureExtractor(state, inference)
     mqtt_cli   = MQTTClient(state, feature_ex)
     pkt_sniff  = PacketSniffer(state, feature_ex)
+
+    original_handle = inference._handle
+
+    def handle_with_telegram(result, fd):
+        original_handle(result, fd)
+        prediction = result.get("label") if isinstance(result, dict) else None
+        if prediction and prediction != "NORMAL":
+            send_telegram_alert(attack_type=prediction)
+
+    inference._handle = handle_with_telegram
 
     app = create_app(state, inference, alert_sys)
 
